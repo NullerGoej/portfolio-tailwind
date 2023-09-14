@@ -9,6 +9,11 @@ html {
 
 .filled-navbar {
     transition: background-color 0.3s ease;
+    background-color: #cfe2ff !important;
+}
+
+.button {
+    background-color: #0d6efd !important;
 }
 
 #section1 {
@@ -17,20 +22,17 @@ html {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 section {
     min-height: 100vh;
+    padding: 48px 0;
 }
 
 #section4 {
     min-height: calc(100vh - 72px);
 }
-
-
-/* Vignette effect */
 
 .vignette {
     position: relative;
@@ -48,41 +50,72 @@ section {
 
 .card-img {
     max-height: 300px;
-    /* Adjust the height as needed */
     object-fit: cover;
-    /* Ensure the image covers the entire container */
 }
 
 h1 {
     text-align: center;
-    font-size: 36px;
-    /* Adjust the font size as needed */
+    font-size: 36px !important;
+    font-weight: 500 !important;
     color: #333;
-    /* Choose your desired text color */
     text-transform: uppercase;
-    /* Uppercase the text */
-    letter-spacing: 2px;
-    /* Adjust letter spacing as needed */
+    letter-spacing: 2px !important;
     margin-bottom: 20px;
-    /* Add some spacing below the title */
 }
 
 .text-border {
-    /* Set the text color to white */
-    text-shadow: -1px -1px 0 #cfe2ff, /* Top left */
-    1px -1px 0 #cfe2ff, /* Top right */
-    -1px 1px 0 #cfe2ff, /* Bottom left */
-    1px 1px 0 #cfe2ff;
-    /* Bottom right */
+    text-shadow: -1px -1px 0 #cfe2ff, 1px -1px 0 #cfe2ff, -1px 1px 0 #cfe2ff, 1px 1px 0 #cfe2ff;
 }
 
 .stylish-p {
     font-size: 18px;
-    /* Adjust the font size as needed */
     line-height: 1.6;
-    /* Adjust line height for better readability */
     color: #333;
-    /* Text color */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    /* Add a subtle text shadow */
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+
+.navbar-title {
+    font-size: 1.25rem !important;
+}
+
+.navbar-item {
+    color: #363636 !important;
+}
+
+nav {
+    z-index: 1;
+}
+
+.text-xl {
+    font-size: 1.75rem !important;
+    font-weight: 500 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .py-4 {
+        padding: 1rem !important;
+    }
+}
+
+#mobile-menu .hidden {
+    display: none;
+}
+
+#mobile-menu a {
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+
+#toggle-menu {
+    cursor: pointer;
 }

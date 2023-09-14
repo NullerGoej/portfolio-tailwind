@@ -1,16 +1,21 @@
 $(document).ready(function() {
-    // Initial class for the navbar
-    var $navbar = $('.navbar');
+    var $navbar = $('nav');
     var navbarDefaultClass = 'transparent-navbar';
     var navbarFilledClass = 'filled-navbar';
-    var scrollOffset = 100; // Adjust this value based on your design
+    var scrollOffset = 100;
 
-    // Check scroll position and update the navbar class
     $(window).scroll(function() {
         if ($(this).scrollTop() > scrollOffset) {
             $navbar.removeClass(navbarDefaultClass).addClass(navbarFilledClass);
         } else {
             $navbar.removeClass(navbarFilledClass).addClass(navbarDefaultClass);
         }
+    });
+
+    const mobileMenu = document.getElementById("mobile-menu");
+    const toggleMenuButton = document.getElementById("toggle-menu");
+
+    toggleMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
     });
 });

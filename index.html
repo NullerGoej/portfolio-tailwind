@@ -5,46 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Tailwind CSS</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="bg-primary-subtle fixed top-0 w-full">
-        <div class="container mx-auto p-4">
+    <nav class="fixed top-0 w-full transparent-navbar">
+        <div class="md:container mx-auto py-4 sm-p-4">
             <div class="flex justify-between items-center">
-                <a class="text-white text-lg font-bold" href="#">Moedekjaer</a>
-                <button class="lg:hidden text-white text-xl" id="toggle-menu">
+                <a class="navbar-title" href="#">Moedekjaer</a>
+                <button class="navbar-item lg:hidden text-xl" id="toggle-menu">
                     <i class="fas fa-bars"></i>
                 </button>
+
                 <div class="hidden lg:flex space-x-4">
-                    <a class="text-white" href="#section1">Home</a>
-                    <a class="text-white" href="#section2">About</a>
-                    <a class="text-white" href="#section3">Projects</a>
-                    <a class="text-white" href="#section4">Contact</a>
+                    <a class="navbar-item" href="#section1">Home</a>
+                    <a class="navbar-item" href="#section2">About</a>
+                    <a class="navbar-item" href="#section3">Projects</a>
+                    <a class="navbar-item" href="#section4">Contact</a>
                 </div>
+            </div>
+            <div class="hidden" id="mobile-menu">
+                <a class="navbar-item" href="#section1">Home</a>
+                <a class="navbar-item" href="#section2">About</a>
+                <a class="navbar-item" href="#section3">Projects</a>
+                <a class="navbar-item" href="#section4">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Section 1 -->
-    <section id="section1" class="py-5 h-screen bg-vignette flex flex-col justify-end">
-        <div class="container mx-auto text-center">
-            <h1 class="text-border text-4xl md:text-6xl">Bastian Mødekjær</h1>
+    <section id="section1" class="h-screen vignette flex flex-col justify-end">
+        <div class="md:container mx-auto text-center">
+            <h1 class="text-border">Bastian Mødekjær</h1>
             <p class="mt-4">
-                <span class="badge bg-primary-subtle text-dark border border-dark">Webdeveloper</span>
-                <span class="badge bg-secondary-subtle text-dark border border-dark">Softwaredeveloper</span>
-                <span class="badge bg-danger-subtle text-dark border border-dark">Tech Passionate</span>
-                <span class="badge bg-success-subtle text-dark border border-dark">Gamer</span>
+                <span class="badge border">Webdeveloper</span>
+                <span class="badge border">Softwaredeveloper</span>
+                <span class="badge border">Tech Passionate</span>
+                <span class="badge border">Gamer</span>
             </p>
         </div>
     </section>
 
     <!-- Section 2 -->
     <section id="section2" class="py-5 flex items-center">
-        <div class="container mx-auto">
+        <div class="md:container mx-auto">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 md:pr-8">
                     <h1 class="text-4xl md:text-6xl font-bold mb-4">About</h1>
@@ -63,24 +70,24 @@
 
     <!-- Section 3 - Past Projects -->
     <section id="section3" class="py-5 flex items-center">
-        <div class="container mx-auto">
+        <div class="md:container mx-auto">
             <div class="mb-8 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold">Past Projects</h1>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
                 <div class="relative vignette">
-                    <img src="project1.png" alt="Project 1" class="w-full h-auto" />
+                    <img src="project1.png" alt="Project 1" class="card-img" width="100%" />
                     <div class="absolute bottom-0 left-0 p-3">
-                        <h3 class="text-light text-xl">Radio Moedekjaer</h3>
+                        <h3 class="text-white text-xl">Radio Moedekjaer</h3>
                     </div>
-                    <a target="_blank" rel="noopener noreferrer" href="https://radio.moedekjaer.dk" class="absolute top-0 right-0 m-3 bg-primary text-white p-2 rounded-full">View</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://radio.moedekjaer.dk" class="button absolute top-0 right-0 m-3 text-white p-2 rounded-full">View</a>
                 </div>
                 <div class="relative vignette">
-                    <img src="project2.png" alt="Project 2" class="w-full h-auto" />
+                    <img src="project2.png" alt="Project 2" class="card-img" width="100%" />
                     <div class="absolute bottom-0 left-0 p-3">
-                        <h3 class="text-light text-xl">4thID</h3>
+                        <h3 class="text-white text-xl">4thID</h3>
                     </div>
-                    <a target="_blank" rel="noopener noreferrer" href="https://4thid.us/forum" class="absolute top-0 right-0 m-3 bg-primary text-white p-2 rounded-full">View</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://4thid.us/forum" class="button absolute top-0 right-0 m-3 text-white p-2 rounded-full">View</a>
                 </div>
             </div>
         </div>
@@ -88,30 +95,23 @@
 
     <!-- Section 4 - Contact Form -->
     <section id="section4" class="py-5 flex items-center">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Contact Me</h1>
-                    <form onsubmit="alert('Email Definitely Sent!'); return false;" class="mb-4">
-                        <div class="mb-4">
-                            <label for="name" class="block text-lg">Name</label>
-                            <input type="text" id="name" class="form-input w-full border border-gray-400 rounded-lg p-2" placeholder="Your Name" required />
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-lg">Email</label>
-                            <input type="email" id="email" class="form-input w-full border border-gray-400 rounded-lg p-2" placeholder="Your Email" required />
-                        </div>
-                        <div class="mb-4">
-                            <label for="message" class="block text-lg">Message</label>
-                            <textarea id="message" class="form-textarea w-full border border-gray-400 rounded-lg p-2" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="bg-primary text-white py-2 px-4 rounded-lg">Submit</button>
-                    </form>
+        <div class="md:container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Contact Me</h1>
+            <form onsubmit="alert('Email Definitely Sent!'); return false;" class="mb-4">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg">Name</label>
+                    <input type="text" id="name" class="form-input w-full border border-gray-400 rounded-lg p-2" placeholder="Your Name" required />
                 </div>
-                <div class="md:w-1/2">
-                    <!-- You can add additional content or contact information here -->
+                <div class="mb-4">
+                    <label for="email" class="block text-lg">Email</label>
+                    <input type="email" id="email" class="form-input w-full border border-gray-400 rounded-lg p-2" placeholder="Your Email" required />
                 </div>
-            </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg">Message</label>
+                    <textarea id="message" class="form-textarea w-full border border-gray-400 rounded-lg p-2" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="button text-white py-2 px-4 rounded-lg">Submit</button>
+            </form>
         </div>
     </section>
 
@@ -121,6 +121,7 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="app.js"></script>
 </body>
 
