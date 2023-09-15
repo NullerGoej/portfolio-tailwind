@@ -10,7 +10,8 @@ html {
   background-color: #cfe2ff !important; }
 
 .button {
-  background-color: #0d6efd !important; }
+  background-color: #0d6efd !important;
+  padding: 7px 16px !important; }
 
 #section1 {
   background-image: url("coding1.gif");
